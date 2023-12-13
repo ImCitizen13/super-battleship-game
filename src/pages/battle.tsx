@@ -15,7 +15,7 @@ export default function BattleStation() {
   console.log("Could place ship: ", result)
   return (
     <div className="bg-gradient-to-r from-[#800016] to-[#00043A] flex min-h-[100vh] min-w-full flex-col items-center justify-center bg-blue-900">
-      <h1>Battle station</h1>
+      <h1 className=" text-6xl">Battle station</h1>
       <BattleshipGrid grid={battleshipGrid} rows={rows} cols={cols} />
     </div>
   );
