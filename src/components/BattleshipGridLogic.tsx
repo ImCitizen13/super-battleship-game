@@ -1,4 +1,8 @@
-import { Battleship, BattleShipLocation, ShipOrientation } from "./BattleShip";
+import {
+  type Battleship,
+  type BattleShipLocation,
+  ShipOrientation,
+} from "./BattleShip";
 
 export enum CellState {
   Water = "-",
@@ -16,8 +20,6 @@ export type Location = {
   row: number;
   col: number;
 };
-
-
 
 type BattleshipGrid = CellState[];
 
@@ -75,10 +77,10 @@ function canPlaceShip(
   grid: BattleshipGrid,
   battleshipLocation: BattleShipLocation,
 ): boolean {
-  const result = battleshipLocation.locations.filter((location) =>
-    !canPlaceOnBlock(grid, location),
+  const result = battleshipLocation.locations.filter(
+    (location) => !canPlaceOnBlock(grid, location),
   );
-  console.log(result.length == 0)
+  console.log(result.length == 0);
   return true ? result.length == 0 : false;
 }
 
